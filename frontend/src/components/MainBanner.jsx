@@ -8,7 +8,9 @@ const MainBanner = () => {
         <img src={assets.main_banner_bg} alt='banner' className='w-full hidden md:block'/>
         <img src={assets.main_banner_bg_sm} alt='banner' className='w-full max-h-100 md:hidden'/>
         <div className='absolute inset-0 flex flex-col items-center md:items-start justify-end md:justify-center pb-24 md:pb-0 px-4 md:pl-18 lg:pl-24'>
-            <h1 className='sm:text-2xl md:text-2xl lg:text-4xl font-bold text-center md:text-left max-w-72 md:max-w-80 lg:max-w-105 leading-tight lg:leading-15 bg-gradient-to-r from-green-600 via-red-500 to-orange-600 bg-clip-text text-transparent'>
+            <h1 className='sm:text-2xl md:text-2xl lg:text-4xl font-bold text-center md:text-left max-w-72 md:max-w-80 lg:max-w-105 
+            leading-tight lg:leading-15 bg-gradient-to-r from-green-600 via-red-500 to-orange-600 bg-clip-text text-transparent
+            hover:scale-105 hover:transition-all'>
                 Freshness You Can Trust, Service You Won't Forgot & Savings You Will Love!</h1>
         
         <div className='flex items-center mt-6 font-medium'>

@@ -23,7 +23,8 @@ if(searchQuery.length > 0){
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white 
     relative transition-all sticky top-0 z-50 drop-shadow-xl"> 
       <NavLink to="/" onClick={() => setOpen(false)}>
-        <h1 className="font-bold md:text-3xl sm:text-2xl bg-gradient-to-r from-green-600 via-pink-500 to-orange-600 bg-clip-text text-transparent">
+        <h1 className="font-bold md:text-3xl sm:text-2xl bg-gradient-to-r from-green-600 via-pink-500 to-orange-600 bg-clip-text 
+        text-transparent hover:scale-105">
           GROOFY
         </h1>
       </NavLink>
