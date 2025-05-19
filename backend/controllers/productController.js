@@ -16,14 +16,14 @@ export const addProduct = async (req, res) => {
         )
 
         await Product.create({...productData, image: imagesUrl});
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
             message: "Product added successfully"
         })
 
     } catch (error) {
         console.log(error.message);
-        res.json({
+        return res.json({
             success: false,
             message: error.message
         })
@@ -34,14 +34,14 @@ export const addProduct = async (req, res) => {
 export const productList = async (req, res) => {
     try {
         const products = await Product.find({});
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
             message: "Product list fetched successfully",
             products
         })
     } catch (error) {
         console.log(error.message);
-        res.json({
+        return res.json({
             success: false,
             message: error.message
         })
@@ -61,14 +61,14 @@ export const productById = async (req, res) => {
                 message: "Product not found"
             })
         }
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
             message: "Product fetched successfully",
             product
         })
     } catch (error) {
         console.log(error.message);
-        res.json({
+        return res.json({
             success: false,
             message: error.message
         })
@@ -81,13 +81,13 @@ export const changeStock = async (req, res) => {
     try {
         const { id, inStock } = req.body;
         await Product .findByIdAndUpdate(id, { insStock })
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
             message: "Product stock updated successfully"
         })
     } catch (error) {
         console.log(error.message);
-        res.json({
+        return res.json({
             success: false,
             message: error.message
         })
