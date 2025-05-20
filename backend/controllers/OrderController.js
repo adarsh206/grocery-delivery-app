@@ -51,14 +51,29 @@ export const getUserOrders = async (req, res) => {
         const orders = await Order.find({ userId, 
             $or: [{paymentType: "COD"}, {isPaid: true}]
         }).populate("items.product address").sort({createdAt: -1});
-        return res.status(200).json({
+        res.status(200).json({
             success: true,
             message: "Orders fetched successfully",
             orders
         })
     } catch (error) {
-        console.log(error.message);
-        return res.json({ success: false, message: error.message })        
+        res.json({ success: false, message: error.message })        
+        
+    }
+}
+
+// Get All Orders(for seller / admin) : /api/order/seller
+export const getAllOrders = async (req, res) => {
+    try { 
+        const orders = await Order.find({
+            $or: [{paymentType: "COD"}, {isPaid: true}]
+        }).populate("items.product address").sort({createdAt: -1});
+        res.status(200).json({
+            success: true,
+            orders
+        })
+    } catch (error) {
+        res.json({ success: false, message: error.message })        
         
     }
 }
