@@ -1,4 +1,6 @@
 
+import jwt from "jsonwebtoken";
+
 
 // Login Seller : /api/seller/login 
  export const sellerLogin = async (req, res) => {
@@ -29,7 +31,7 @@
  // Check Seller Auth : /api/seller/is-auth
 export const isSellerAuth = async (req, res) => {
     try {
-        return res.json({success:true});
+        res.json({success:true});
     } catch (error) {
         console.log(error.message);
         return res.json({success:false, message: error.message});

@@ -13,7 +13,7 @@ const authSeller = async (req, res, next) => {
                  next();
             }
             else{
-                return res.json({ success: false, message: "Unauthorized" });
+                return res.status(401).json({ success: false, message: "Unauthorized" });
             }
            
         } catch (error) {
