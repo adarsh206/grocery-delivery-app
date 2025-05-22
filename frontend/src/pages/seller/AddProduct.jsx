@@ -9,8 +9,8 @@ const AddProduct = () => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
-    const [price, setPrice] = useState('');
-    const [offerPrice, setOfferPrice] = useState('');
+    const [price, setPrice] = useState(null);
+    const [offerPrice, setOfferPrice] = useState(null);
 
     const {axios} = useAppContext();
 
@@ -24,13 +24,18 @@ const AddProduct = () => {
                 price,
                 offerPrice,
             }
+
             const formData = new FormData();
             formData.append('productData', JSON.stringify(productData));
             for(let i = 0; i < files.length; i++){
                 formData.append('images', files[i]);
             }
 
-        const {data} = await axios.post('/api/product/add', formData);
+        const {data} = await axios.post('/api/product/add', formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
         if(data.success){
             toast.success(data.message);
             setName("");

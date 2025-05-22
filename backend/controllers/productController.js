@@ -4,25 +4,27 @@ import Product from '../models/Product.js';
 // Add Product : /api/product/add
 export const addProduct = async (req, res) => {
     try {
+        let productData = JSON.parse(req.body.productData);
+        const images = req.files;
+
         console.log('req.body:', req.body);
         console.log('req.files:', req.files);
 
         if (!req.body.productData) {
+            console.log(productData)
+            console.log(images)
             return res.status(400).json({ success: false, message: 'Missing productData' });
+        }
+        
+        if (!req.files || req.files.length === 0) {
+             return res.status(400).json({ success: false, message: "No images uploaded" });
         }
 
        // let productData = JSON.parse(req.body.productData);
-       const productData = {
-            name: req.body.name,
-            description: [req.body.description].split('\n'), // or `.split('\n')` if multiline
-            category: req.body.category,
-            price: req.body.price,
-            offerPrice: req.body.offerPrice,
-        };
-        const images = req.files;
+       
 
         let imagesUrl = await Promise.all(
-            images.map(async (item) => {
+            req.files.map(async (item) => {
                 let result = await cloudinary.uploader.upload(item.path, {
                     resource_type: 'image',
                 });
