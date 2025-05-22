@@ -4,24 +4,40 @@ import Product from '../models/Product.js';
 // Add Product : /api/product/add
 export const addProduct = async (req, res) => {
     try {
-        let productData = JSON.parse(req.body.productData);
+        console.log('req.body:', req.body);
+        console.log('req.files:', req.files);
+
+        if (!req.body.productData) {
+            return res.status(400).json({ success: false, message: 'Missing productData' });
+        }
+
+       // let productData = JSON.parse(req.body.productData);
+       const productData = {
+            name: req.body.name,
+            description: [req.body.description].split('\n'), // or `.split('\n')` if multiline
+            category: req.body.category,
+            price: req.body.price,
+            offerPrice: req.body.offerPrice,
+        };
         const images = req.files;
+
         let imagesUrl = await Promise.all(
             images.map(async (item) => {
                 let result = await cloudinary.uploader.upload(item.path, {
-                    resource_type: 'images',
+                    resource_type: 'image',
                 });
                 return result.secure_url;
             })
         )
 
         await Product.create({...productData, image: imagesUrl});
+
         return res.status(200).json({
             success: true,
             message: "Product added successfully"
         })
 
-    } catch (error) {
+    } catch (error) {      
         console.log(error.message);
         return res.json({
             success: false,
