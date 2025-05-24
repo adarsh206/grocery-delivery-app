@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
+import GroceryLogo from "./GroceryLogo";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -20,20 +21,24 @@ if(searchQuery.length > 0){
 
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white 
-    relative transition-all sticky top-0 z-50 drop-shadow-xl"> 
+    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 backdrop-blur-2xl
+    relative transition-all sticky top-0 z-50 drop-shadow-2xl"> 
       <NavLink to="/" onClick={() => setOpen(false)}>
-        <h1 className="font-bold md:text-3xl sm:text-2xl bg-gradient-to-r from-green-600 via-pink-500 to-orange-600 bg-clip-text 
+      <div className="flex items-center">
+      <GroceryLogo />
+        <h1 className="font-bold md:text-3xl sm:text-xl bg-gradient-to-r from-green-600 via-pink-500 to-orange-600 bg-clip-text 
         text-transparent hover:scale-105">
           GROOFY
         </h1>
+      </div>
+      
       </NavLink>
 
       {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
-        <NavLink to="/" className="focus:underline focus:text-primary">Home</NavLink>
-        <NavLink to="/products" className="focus:underline focus:text-primary">All Product</NavLink>
-        <NavLink to="/" className="focus:underline focus:text-primary">Contact</NavLink>
+        <NavLink to="/" className="focus:underline focus:text-primary hover:scale-105">Home</NavLink>
+        <NavLink to="/products" className="focus:underline focus:text-primary hover:scale-105">All Product</NavLink>
+        <NavLink to="/" className="focus:underline focus:text-primary hover:scale-105">Contact</NavLink>
 
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
           <input onChange={(e) => setSearchQuery(e.target.value)}
