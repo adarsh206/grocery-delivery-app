@@ -7,12 +7,7 @@ export const addProduct = async (req, res) => {
         let productData = JSON.parse(req.body.productData);
         const images = req.files;
 
-        console.log('req.body:', req.body);
-        console.log('req.files:', req.files);
-
-        if (!req.body.productData) {
-            console.log(productData)
-            console.log(images)
+        if (!req.body.productData) {           
             return res.status(400).json({ success: false, message: 'Missing productData' });
         }
         
@@ -40,7 +35,7 @@ export const addProduct = async (req, res) => {
         })
 
     } catch (error) {      
-        console.log(error.message);
+        
         return res.json({
             success: false,
             message: error.message
@@ -58,7 +53,7 @@ export const productList = async (req, res) => {
             products
         })
     } catch (error) {
-        console.log(error.message);
+      
         return res.json({
             success: false,
             message: error.message
@@ -98,13 +93,13 @@ export const productById = async (req, res) => {
 export const changeStock = async (req, res) => {
     try {
         const { id, inStock } = req.body;
-        await Product .findByIdAndUpdate(id, { insStock })
+        await Product .findByIdAndUpdate(id, { inStock })
         return res.status(200).json({
             success: true,
             message: "Product stock updated successfully"
         })
     } catch (error) {
-        console.log(error.message);
+        
         return res.json({
             success: false,
             message: error.message
