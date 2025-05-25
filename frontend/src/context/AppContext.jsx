@@ -162,7 +162,8 @@ const fetchUser = async () => {
     getCartAmount,
     getCartCount,
     axios,
-    fetchProducts
+    fetchProducts,
+    setCartItems
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
