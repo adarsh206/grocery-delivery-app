@@ -24,6 +24,9 @@ Build a grocery delivery app with Full Stack Technology using MERN Stack ReactJs
 
 ![Image](https://github.com/user-attachments/assets/05130d4b-7326-49ef-8b59-93cf7cdb9dfc)
 
+#  Mobile View :
+
+
 ![Image](https://github.com/user-attachments/assets/0b054dfa-53cf-4649-8493-afb75ab93208)
 
 ![Image](https://github.com/user-attachments/assets/67d788e8-6dc3-4c51-81eb-8bd4626f5150)
@@ -31,3 +34,39 @@ Build a grocery delivery app with Full Stack Technology using MERN Stack ReactJs
 ![Image](https://github.com/user-attachments/assets/2f53f296-d98e-4826-ad19-d53a63d2b81b)
 
 ![Image](https://github.com/user-attachments/assets/f8cbf885-ff9e-4a02-bc8a-a1845ca2c4ef)
+
+
+#  How to use this project :
+
+1. First download and open in any code editor or clone it after fork.
+2. then install all the required packages which is mentioned in package.json file
+3. then create your .env file and store all the api keys and secret keys which is mentioned below.
+4. Frontend .env parameters :
+   
+             VITE_CURRENCY = '$'
+             VITE_BACKEND_URL = "your localhost url"
+   
+5. Backend .env parameters :
+       
+              PORT = 
+              MONGODB_URI = ""
+              JWT_SECRET = ""
+              NODE_ENV = ""
+              
+              # Admin Credentials
+              SELLER_EMAIL = ""
+              SELLER_PASSWORD = ""
+              
+              #Clouydinary
+              CLOUDINARY_CLOUD_NAME = ""
+              CLOUDINARY_API_KEY = ""
+              CLOUDINARY_API_SECRET = ""
+              
+              #Stripe
+              STRIPE_PUBLISHABLE_KEY = ''
+              STRIPE_SECRET_KEY = ''
+              STRIPE_WEBHOOK_SECRET = ''
+
+6. then run the project and open on any browser like chrome.
+7. it will start showing your project on browser.
+
