@@ -35,6 +35,10 @@ Build a grocery delivery app with Full Stack Technology using MERN Stack ReactJs
 
 ![Image](https://github.com/user-attachments/assets/f8cbf885-ff9e-4a02-bc8a-a1845ca2c4ef)
 
+![Image](https://github.com/user-attachments/assets/d6f74407-d456-477c-84d3-d90cac4fca1d)
+
+![Image](https://github.com/user-attachments/assets/bade7a04-b78b-4345-8b10-fd3b7227c5d0)
+
 
 #  How to use this project :
 
