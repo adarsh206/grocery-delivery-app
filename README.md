@@ -1,6 +1,22 @@
-#  Overview :
+#  Grocery Deloivery App :
 
-Build a grocery delivery app with Full Stack Technology using MERN Stack ReactJs, Express.js, Node.js and MongoDB with the help of cloudinary for storing images and stripe payment gateway for online payment transaction
+Build a grocery delivery app with Full Stack Technology using MERN Stack ReactJs, Express.js, Node.js and MongoDB with the help of cloudinary for storing images and stripe payment gateway for online payment transaction.
+
+
+#  App Overview :
+
+1. Full Responsive Grocery delivery app with Full Stack Technology using MERN Stack ReactJs, Express.js, Node.js and MongoDB with the help of cloudinary for storing images and stripe payment gateway for online payment transaction.
+2. In the home section beautiful hero section is there after navigation section beautiful hero section message is written with beautiful background image.
+3. then category section is there after that best section is there then testimonial, contact section and in the last awesome footer section is there.
+4. user can filter the groceries by selection the desired category and it will only show the filtered groceries.
+5. user can search any item in search section in navbar section it will only show the match items.
+6. user can see all the products available in app by clicking on all products present in navbar section.
+7. In the navbar section first app logo and name is there and then home, all products, contact and search section is there and in the last cart and authentication section is there.
+8. When user have to buy any anything then they can click on add to cart or buy button it will add the items in the cart user can also increment or decrement the number of items.
+9. after that add the address and select the payment method cod or online by default cod is there and only authorized user can be able to place order so login and register first then try to place item.
+10. if you have selected online payment method then it will navigate you to the stripe payment system there you fill your account details and then place order when the will successfully placed then it will navigate you to the myorders page where all the datails will be shown related to order and then will give you success notification and if the order gets fail then it will give you failed notification.
+11. and if the user have selected cod method then your order will be placed and you will get the success notification and will be navigated to the my orders page where all the details will be shown.
+
 
 #  Images :
 
