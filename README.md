@@ -16,6 +16,11 @@ Build a grocery delivery app with Full Stack Technology using MERN Stack ReactJs
 9. after that add the address and select the payment method cod or online by default cod is there and only authorized user can be able to place order so login and register first then try to place item.
 10. if you have selected online payment method then it will navigate you to the stripe payment system there you fill your account details and then place order when the will successfully placed then it will navigate you to the myorders page where all the datails will be shown related to order and then will give you success notification and if the order gets fail then it will give you failed notification.
 11. and if the user have selected cod method then your order will be placed and you will get the success notification and will be navigated to the my orders page where all the details will be shown.
+12. Admin section is also there where only admin can add, delete and modify the products and see all ordered products.
+13. App is fully responsive for all the devices like mobile, tablet, laptop, computer and etc.
+14. In the add product section admin can add multiple images of a product along with product name, description, price, offer price and category which ame will reflect in the app.
+15. And in the product list section every product will be there which is available in the app along with every details provided during add product time and admin can change the stock availability of a product from here with the toggle button provided here for every products.
+16. and in the orders section every order will be shown which was ordered by the users with each and every details.
 
 
 #  Images :
